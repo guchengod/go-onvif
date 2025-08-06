@@ -6,15 +6,15 @@ import (
 	"log"
 	"net/http"
 
-	goonvif "github.com/use-go/onvif"
-	"github.com/use-go/onvif/device"
-	sdk "github.com/use-go/onvif/sdk/device"
-	"github.com/use-go/onvif/xsd/onvif"
+	goonvif "github.com/guchengod/go-onvif"
+	"github.com/guchengod/go-onvif/device"
+	sdk "github.com/guchengod/go-onvif/sdk/device"
+	"github.com/guchengod/go-onvif/xsd/onvif"
 )
 
 const (
 	login    = "admin"
-	password = "Supervisor"
+	password = "hzmt2025"
 )
 
 func main() {
@@ -22,7 +22,7 @@ func main() {
 
 	//Getting an camera instance
 	dev, err := goonvif.NewDevice(goonvif.DeviceParams{
-		Xaddr:      "192.168.13.14:80",
+		Xaddr:      "192.168.20.73:80",
 		Username:   login,
 		Password:   password,
 		HttpClient: new(http.Client),
@@ -60,7 +60,7 @@ func main() {
 	if err != nil {
 		log.Println(err)
 	} else {
-		// You could use https://github.com/use-go/onvif/gosoap for pretty printing response
+		// You could use https://github.com/guchengod/go-onvif/gosoap for pretty printing response
 		fmt.Println(createUserResponse)
 	}
 

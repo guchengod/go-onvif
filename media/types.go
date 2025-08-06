@@ -1,8 +1,8 @@
 package media
 
 import (
-	"github.com/use-go/onvif/xsd"
-	"github.com/use-go/onvif/xsd/onvif"
+	"github.com/guchengod/go-onvif/xsd"
+	"github.com/guchengod/go-onvif/xsd/onvif"
 )
 
 type Capabilities struct {
